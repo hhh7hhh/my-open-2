@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+*.spec
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 敏感的本地配置
+config/tools_private.yaml
+
+# 输出/日志
+reports/
+*.log
+test_out*.txt
+test_result*.txt
+
+# 虚拟环境
+venv/
+.venv/
+
+# 推送辅助脚本
+push_to_github.py
+push_now.cmd
+
+# OS
+Thumbs.db
+.DS_Store
