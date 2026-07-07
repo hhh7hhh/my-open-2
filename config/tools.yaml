@@ -1,0 +1,175 @@
+# 日常小帮手 - 工具配置文件
+# 添加新工具：在 tools 列表中添加新条目即可
+
+tools:
+  - name: "鸣潮"
+    icon: "wave"
+    adapter: "okww_adapter"
+    enabled: true
+    game_exe: "Client-Win64-Shipping.exe"
+    exe_path: "PATH_TO_OKWW_EXE"
+    tasks:
+      - id: "DailyTask"
+        name: "日常任务"
+        args: "1"
+        desc: "登录领月卡 → 刷体力(180体) → 领每日奖励 → 领邮件 → 领纪行 → 检查花园"
+        eta: 12
+        enabled: true
+      - id: "MultiAccountDailyTask"
+        name: "多账号日常"
+        args: "2"
+        desc: "多账号轮流执行日常任务"
+        eta: 30
+        enabled: false
+      - id: "FarmEchoTask"
+        name: "刷4C声骸"
+        args: "3"
+        desc: "传送Boss → 自动战斗 → 拾取声骸 → 循环刷取(可配Boss等级/次数/拾取方式)"
+        eta: 15
+        enabled: false
+      - id: "AutoRogueTask"
+        name: "半自动肉鸽"
+        args: "4"
+        desc: "周常肉鸽半自动战斗(需中文语言)，自动选门/选角色/升级"
+        eta: 10
+        enabled: false
+      - id: "ForgeryTask"
+        name: "锻造挑战"
+        args: "5"
+        desc: "刷选定的锻造挑战副本(需能F2传送)，每把40体"
+        eta: 8
+        enabled: false
+      - id: "NightmareNestTask"
+        name: "梦魇巢穴"
+        args: "6"
+        desc: "自动刷所有梦魇净化+特塞特不谐巢穴，自动传送战斗收集"
+        eta: 15
+        enabled: false
+      - id: "SimulationTask"
+        name: "模拟挑战"
+        args: "7"
+        desc: "刷模拟挑战获取材料(谐振EXP/武器EXP/贝壳信用)，每把40体"
+        eta: 8
+        enabled: false
+      - id: "TacetTask"
+        name: "特塞特压制"
+        args: "8"
+        desc: "刷选定的特塞特压制副本直到体力耗尽(需F2传送)"
+        eta: 10
+        enabled: false
+      - id: "EnhanceEchoTask"
+        name: "批量强化声骸"
+        args: "9"
+        desc: "点B进背包→过滤器选声骸→按等级排序后开始(可配双爆/有效词条门槛)"
+        eta: 5
+        enabled: false
+      - id: "ChangeEchoTask"
+        name: "更换声骸"
+        args: "10"
+        desc: "自动更换/比较声骸属性"
+        eta: 3
+        enabled: false
+      - id: "GardenTask"
+        name: "周常乐园"
+        args: "11"
+        desc: "自动检测并点击花园动作直到任务停止(检测6000分上限)"
+        eta: 5
+        enabled: false
+
+  - name: "星铁"
+    icon: "train"
+    adapter: "m7a_adapter"
+    enabled: true
+    game_exe: "StarRail.exe"
+    exe_path: "PATH_TO_M7A_EXE"
+    tasks:
+      - id: "daily"
+        name: "每日实训"
+        args: "daily"
+        desc: "每日任务500活跃度 → 领奖励 → 邮件 → 兑换码(如配) → 余烬兑换 → 派遣(不关游戏)"
+        eta: 15
+        enabled: true
+      - id: "routine"
+        name: "精简日常"
+        args: "routine"
+        desc: "比Daily更轻量的日常模式(Routine模式)"
+        eta: 8
+        enabled: false
+      - id: "power"
+        name: "清体力"
+        args: "power"
+        desc: "刷遗器/行迹材料，优先执行体力计划，支持培养目标自动选副本"
+        eta: 10
+        enabled: false
+      - id: "main"
+        name: "完整运行"
+        args: "main"
+        desc: "版本检查→启动游戏→每日实训→清体力→领奖励→关闭游戏(全自动)"
+        eta: 25
+        enabled: false
+      - id: "fight"
+        name: "自动战斗"
+        args: "fight"
+        desc: "挂机自动战斗"
+        eta: 5
+        enabled: false
+      - id: "universe"
+        name: "模拟宇宙"
+        args: "universe"
+        desc: "完整模拟宇宙(支持星穹铁道自动化外挂exe模式/Mirror酱更新)"
+        eta: 20
+        enabled: false
+      - id: "divergent"
+        name: "差分宇宙"
+        args: "divergent"
+        desc: "差分宇宙(日/周上限独立计数)，支持培养目标连刷"
+        eta: 15
+        enabled: false
+      - id: "currencywars"
+        name: "货币战争"
+        args: "currencywars"
+        desc: "刷信用点/经验书"
+        eta: 10
+        enabled: false
+      - id: "forgottenhall"
+        name: "忘却之庭"
+        args: "forgottenhall"
+        desc: "混沌回忆自动战斗"
+        eta: 15
+        enabled: false
+      - id: "purefiction"
+        name: "虚构叙事"
+        args: "purefiction"
+        desc: "虚构叙事自动战斗"
+        eta: 10
+        enabled: false
+      - id: "apocalyptic"
+        name: "末日幻影"
+        args: "apocalyptic"
+        desc: "末日幻影自动战斗"
+        eta: 10
+        enabled: false
+      - id: "redemption"
+        name: "兑换码"
+        args: "redemption"
+        desc: "自动兑换礼包码"
+        eta: 2
+        enabled: false
+
+# 管家设置
+settings:
+  task_interval_seconds: 3      # 任务间缓冲时间
+  max_restart_count: 3          # 单个任务最大重启次数
+  cpu_dead_threshold: 0.0       # CPU低于此值判定假死
+  cpu_dead_duration: 10         # CPU持续低值多少秒判定假死
+  hung_check_interval: 5        # 窗口僵死检测间隔(秒)
+  default_timeout_minutes: 60   # 默认任务超时(分钟)
+
+# DeepSeek AI 设置
+deepseek:
+  enabled: true
+  api_key: ""                   # 填入你的 DeepSeek API Key
+  base_url: "https://api.deepseek.com"
+  model: "deepseek-chat"
+  max_retry_per_error: 2        # 同一错误最多调用 AI 次数
+  daily_budget_yuan: 1.0        # 每日 AI 费用上限(元)
