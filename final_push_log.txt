@@ -1,0 +1,7 @@
+RC: 128
+--- STDOUT ---
+
+--- STDERR ---
+Pushing to https://github.com/hhhh7hhh/my-open-2.git
+remote: Repository not found.
+fatal: repository 'https://github.com/hhhh7hhh/my-open-2.git/' not found
